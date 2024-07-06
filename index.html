@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            background-color: rgb(22, 44, 105);
+        }
+        .sidebar {
+            display: none; /* Ensure the sidebar is hidden initially */
+        }
+        .experience{
+            display: none;
+        }
+        .work{
+            display: none;
+        }
+        .contact{
+            display: none;
+        }
+        .resume{
+            display: none;
+        }
+    </style>
+     <script>
+        window.onload = function() {
+            document.getElementById('sidebar').style.display = 'none';
+        };
+        function Show() {
+            const sidebar = document.getElementById("sidebar");
+            if (sidebar.style.display === "none") {
+                sidebar.style.display = "block";
+            } else {
+                sidebar.style.display = "none";
+            }
+        }
+        function openSidebar() {
+            const sidebar = document.getElementById("sidebar");
+            if (sidebar.style.display === "none") {
+                sidebar.style.display = "block";
+            } else {
+                sidebar.style.display = "none";
+            }
+        }
+        function openExperience(){
+            const exp = document.getElementById("experience");
+            const abt = document.getElementById("abtsection");
+            const wk = document.getElementById("work");
+            const c = document.getElementById("contact");
+            const r = document.getElementById("resume");
+            if (exp.style.display === "none") {
+                exp.style.display = "block";
+                abt.style.display = "none";
+                wk.style.display = "none";
+                r.style.display = "none";
+                c.style.display = "none";
+
+               
+        }
+             else {
+               exp.style.display = "block";
+                abt.style.display = "none";
+                wk.style.display = "none";
+                c.style.display = "none";
+                r.style.display = "none";
+
+                
+            }
+        }
+        function openAbout(){
+            const abt = document.getElementById("abtsection");
+            const exp = document.getElementById("experience");
+            const wk = document.getElementById("work");
+            const c = document.getElementById("contact");
+            const r = document.getElementById("resume");
+            if (abt.style.display === "none") {
+                abt.style.display = "block";
+                
+               
+                exp.style.display= "none";
+                wk.style.display= "none";
+                r.style.display = "none";
+        }
+             else {
+                abt.style.display = "block";
+                c.style.display = "none";
+                r.style.display = "none";
+            }
+        }
+        function openWork(){
+            const wk = document.getElementById("work");
+            const abt = document.getElementById("abtsection");
+            const exp = document.getElementById("experience");
+            const c = document.getElementById("contact");
+            const r = document.getElementById("resume");
+            if (wk.style.display === "none") {
+                wk.style.display = "block";
+                abt.style.display = "none";
+                exp.style.display = "none";
+                c.style.display = "none";
+                r.style.display = "none";
+               
+               
+        }
+             else {
+               wk.style.display = "block";
+                abt.style.display = "none";
+                c.style.display = "none";
+                r.style.display = "none";
+                
+            }
+
+        }
+        function openContact(){
+            const wk = document.getElementById("work");
+            const abt = document.getElementById("abtsection");
+            const exp = document.getElementById("experience");
+            const c = document.getElementById("contact");
+            const r = document.getElementById("resume");
+            if (c.style.display === "none") {
+                c.style.display = "block";
+                abt.style.display = "none";
+                exp.style.display = "none";
+                wk.style.display = "none";
+                r.style.display = "none";
+                
+               
+        }
+             else {
+               c.style.display = "block";
+                abt.style.display = "none";
+                wk.style.display = "none";
+                exp.style.display = "none";
+                r.style.display = "none";
+                
+            }
+
+        }
+        function openResume(){
+            const wk = document.getElementById("work");
+            const abt = document.getElementById("abtsection");
+            const exp = document.getElementById("experience");
+            const c = document.getElementById("contact");
+            const r = document.getElementById("resume");
+            if (r.style.display === "none") {
+                r.style.display = "block";
+                abt.style.display = "none";
+                exp.style.display = "none";
+                wk.style.display = "none";
+                c.style.display = "none";
+                
+               
+        }
+             else {
+               r.style.display = "block";
+                abt.style.display = "none";
+                wk.style.display = "none";
+                exp.style.display = "none";
+                c.style.display = "none";
+
+                
+            }
+
+        }
+        const predefinedResponses = {
+            "hello": "Hi there! How can I assist you today?",
+            "how are you": "I'm just a bot, but I'm here to help you!",
+            "what is your name": "I am a simple AI chatbot created for demonstration purposes.",
+            "bye": "Goodbye! Have a great day!"
+        };
+
+        function sendMessage() {
+            const userInput = document.getElementById('userInput').value.toLowerCase();
+            if (userInput.trim() === "") return;
+
+            addMessage(userInput, 'user');
+
+            const botResponse = predefinedResponses[userInput] || "I'm sorry, I don't understand that. Can you please rephrase?";
+            setTimeout(() => {
+                addMessage(botResponse, 'bot');
+            }, 1000);
+
+            document.getElementById('userInput').value = '';
+        }
+
+        function addMessage(message, sender) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            messageElement.className = sender === 'user' ? 'user-message' : 'bot-message';
+            chatMessages.appendChild(messageElement);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <i onclick="openSidebar()" class="fa-solid fa-bars"></i>
+            <img src="Plogo.jpg" alt="">
+            <h1>Saugat's </h1>
+            <h1>Portfolio</h1>
+        </div>
+        <div class="nav-right">
+            <ul>
+                <a onclick="openAbout()" href="#"><li>About</li></a>
+                <a onclick="openExperience()" href="#"><li>Experience</li></a>
+                <a onclick="openWork()" href="#"><li>Work</li></a>
+                <a onclick="openContact()" href="#"><li>Contact</li></a>
+                <a onclick="openResume()" href="#"><li>Resume</li></a>
+            </ul>
+        </div>
+    </nav>
+    <section class="content">
+        <div class="maincontent">
+            <div id="sidebar" class="sidebar">
+                <h1>Social Media Links</h1>
+               <a href="https://github.com/SaugatGautam100/Making-Website">
+
+                   <i  class="fa-brands fa-github"></i>
+               </a> 
+               <a href="https://www.instagram.com/saugat.official/">
+
+                   <i class="fa-brands fa-instagram"></i>
+               </a>
+               <a href="https://x.com/?lang-en&mx=2">
+
+                   <i class="fa-brands fa-twitter"></i>
+               </a>
+               <a href="https://www.bing.com/ck/a?!&&p=7c031938a192c146JmltdHM9MTcyMDEzNzYwMCZpZ3VpZD0yZGVhMDQ3Ny0yODJiLTYwMzYtMGE0NS0xMGU3Mjk5OTYxOWYmaW5zaWQ9NTE4OA&ptn=3&ver=2&hsh=3&fclid=2dea0477-282b-6036-0a45-10e72999619f&psq=linkedin&u=a1aHR0cHM6Ly93d3cubGlua2VkaW4uY29tLw&ntb=1">
+
+                   <i class="fa-brands fa-linkedin"></i>
+               </a>
+               <a href="https://www.facebook.com/">
+
+                   <i class="fa-brands fa-facebook"></i>
+               </a>
+            </div>
+            <div class="abtsection" id="abtsection">
+                <div class="abt">
+
+                    <h1>About Me</h1>
+                   
+                    <p>
+                        Saugat Gautam is a remarkable 15-year-old from Nepal who has already carved a niche for himself in the world of technology. His extensive knowledge spans across various domains such as web development, software development, and app development, showcasing his versatility and passion for the field. Starting with web development, Saugat has a firm grasp on the foundational languages of the web, including HTML and CSS. These languages have enabled him to create visually appealing and well-structured websites. His proficiency in JavaScript adds a dynamic layer to his web projects, allowing for interactive and engaging user experiences.
+
+But Saugat's expertise doesn't stop at the basics. He has ventured into more advanced territories with frameworks like React and Angular. React has empowered him to build user interfaces that are not only efficient but also scalable. This skill is particularly valuable in today's fast-paced tech environment where user experience is paramount. Similarly, Angular has provided him with the tools to create robust and maintainable web applications. These frameworks require a deep understanding of JavaScript and a commitment to continuous learning, both of which Saugat possesses in abundance.
+
+In addition to his web development skills, Saugat is well-versed in software development. He has mastered programming languages such as C and C++, which are fundamental to understanding the intricacies of software engineering. These languages have given him the capability to write efficient and high-performance code, which is crucial for developing complex software systems. His knowledge extends to app development as well, where he leverages his programming skills to create mobile applications that are both functional and user-friendly.
+
+Saugat's journey in the tech world is a testament to his dedication and enthusiasm. His ability to juggle multiple programming languages and frameworks at such a young age is truly impressive. Whether it's HTML, CSS, JavaScript, React, Angular, C, or C++, he approaches each with a keen sense of curiosity and a desire to excel. His projects reflect his commitment to quality and his continuous pursuit of knowledge. Living in Nepal, Saugat is a beacon of inspiration for young tech enthusiasts in the region. He exemplifies how age and geography are no barriers to achieving excellence in the tech industry. His story is one of ambition, hard work, and a relentless drive to push the boundaries of what is possible. As he continues to grow and evolve in his career, there is no doubt that Saugat Gautam will make significant contributions to the world of technology, inspiring many along the way.
+                
+                
+                </p>
+                </div>
+                <div class="se">
+                    
+                        <h1 class="h">Software</h1>
+                    
+                    <img src="Saugat.jpg" alt="">
+                    <h1 class="h1">Engineer</h1>
+
+                </div>
+            </div>
+            <div class="experience" id="experience">
+                <article class="experience-item">
+                    <h2>Web Development Intern</h2>
+                    <h3>Company XYZ</h3>
+                    <p><strong>Duration:</strong> June 2023 - August 2023</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper dui et urna condimentum, sit amet pretium sapien gravida. Aliquam erat volutpat. Proin id lacus vel nisl posuere tincidunt.</p>
+                </article>
+                <article class="experience-item">
+                    <h2>Junior Web Developer</h2>
+                    <h3>Company ABC</h3>
+                    <p><strong>Duration:</strong> September 2023 - Present</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper dui et urna condimentum, sit amet pretium sapien gravida. Aliquam erat volutpat. Proin id lacus vel nisl posuere tincidunt.</p>
+                </article>
+                <article class="experience-item">
+                    <h2>Freelance Web Designer</h2>
+                    <h3>Self-Employed</h3>
+                    <p><strong>Duration:</strong> January 2023 - May 2023</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper dui et urna condimentum, sit amet pretium sapien gravida. Aliquam erat volutpat. Proin id lacus vel nisl posuere tincidunt.</p>
+                </article>
+                <article class="experience-item">
+                    <h2>Software Development Intern</h2>
+                    <h3>Company DEF</h3>
+                    <p><strong>Duration:</strong> May 2022 - August 2022</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper dui et urna condimentum, sit amet pretium sapien gravida. Aliquam erat volutpat. Proin id lacus vel nisl posuere tincidunt.</p>
+                </article>
+                <article class="experience-item">
+                    <h2>Teaching Assistant</h2>
+                    <h3>University GHI</h3>
+                    <p><strong>Duration:</strong> September 2021 - December 2021</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper dui et urna condimentum, sit amet pretium sapien gravida. Aliquam erat volutpat. Proin id lacus vel nisl posuere tincidunt.</p>
+                </article>
+            </div>
+            <div class="work" id="work">
+                <h1>1.Ai Chatbot </h1>
+                <div class="chat-container">
+                    <div class="chat-header">AI Chatbot</div>
+                    <div class="chat-messages" id="chatMessages"></div>
+                    <div class="chat-input">
+                        <input type="text" id="userInput" placeholder="Type a message..." />
+                        <button onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+                <h1>Calculator</h1>
+                <section class="calculator">
+                    <input type="text" id="display" readonly>
+                    <div class="buttons">
+                        <button onclick="appendNumber('1')">1</button>
+                        <button onclick="appendNumber('2')">2</button>
+                        <button onclick="appendNumber('3')">3</button>
+                        <button onclick="appendOperator('+')">+</button>
+                        <button onclick="appendNumber('4')">4</button>
+                        <button onclick="appendNumber('5')">5</button>
+                        <button onclick="appendNumber('6')">6</button>
+                        <button onclick="appendOperator('-')">-</button>
+                        <button onclick="appendNumber('7')">7</button>
+                        <button onclick="appendNumber('8')">8</button>
+                        <button onclick="appendNumber('9')">9</button>
+                        <button onclick="appendOperator('*')">*</button>
+                        <button onclick="appendNumber('0')">0</button>
+                        <button onclick="clearDisplay()">C</button>
+                        <button onclick="calculateResult()">=</button>
+                        <button onclick="appendOperator('/')">/</button>
+                    </div>
+                </section>
+                <script>
+                    let display = document.getElementById('display');
+let currentInput = '';
+
+function appendNumber(number) {
+    currentInput += number;
+    display.value = currentInput;
+}
+
+function appendOperator(operator) {
+    currentInput += operator;
+    display.value = currentInput;
+}
+
+function clearDisplay() {
+    currentInput = '';
+    display.value = '';
+}
+
+function calculateResult() {
+    try {
+        display.value = eval(currentInput);
+        currentInput = display.value;
+    } catch (error) {
+        display.value = 'Error';
+        currentInput = '';
+    }
+}
+
+                </script>
+                <h1>3.Messaging Program</h1>
+                 <section class="messaging-app">
+                    <div id="message-display" class="message-display"></div>
+                    <input type="text" id="message-input" placeholder="Type your message here...">
+                    <button onclick="sendMessage()">Send</button>
+                </section>
+                <script>
+                    let messageDisplay = document.getElementById('message-display');
+let messageInput = document.getElementById('message-input');
+
+function sendMessage() {
+    let messageText = messageInput.value;
+    if (messageText.trim() !== '') {
+        let message = document.createElement('div');
+        message.className = 'message';
+        message.textContent = messageText;
+        messageDisplay.appendChild(message);
+        messageInput.value = '';
+        messageDisplay.scrollTop = messageDisplay.scrollHeight;
+    }
+}
+
+                </script>
+
+            </div>
+            <div class="contact" id="contact">
+                <section class="contact-form">
+                    <form id="contactForm">
+                        <label for="name">Name: </label>
+                        <input type="text" id="name" name="name" required>
+            
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email" required>
+            
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+            
+                        <label for="subject">Subject:</label>
+                        <select id="subject" name="subject" required>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Support</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+            
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+            
+                        <button type="submit">Submit</button>
+                        <script>
+                            document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Form submitted successfully!');
+    // Here you can add the logic to handle the form submission,
+    // like sending the form data to your server or API.
+});
+
+                        </script>
+                    </form>
+                </section>
+            </div>
+            <div class="resume" id="resume">
+                <header>
+                    <h1>My Resume</h1>
+                </header>
+                <section class="profile">
+                    <h2>Profile</h2>
+                    <p>Hello! I am a web developer with experience in building user-friendly websites and applications. I am proficient in HTML, CSS, and JavaScript, and I am passionate about creating effective digital solutions.</p>
+                </section>
+                <section class="education">
+                    <h2>Education</h2>
+                    <div class="education-item">
+                        <h3>High School Diploma</h3>
+                        <p>XYZ High School, 2021 - Present</p>
+                    </div>
+                </section>
+                <section class="skills">
+                    <h2>Skills</h2>
+                    <ul class="skill">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Design</li>
+                        <li>Version Control (Git)</li>
+                    </ul>
+                </section>
+                <section class="experience">
+                    <h2>Experience</h2>
+                    <article class="experience-item">
+                        <h3>Web Development Intern</h3>
+                        <h4>Company XYZ</h4>
+                        <p><strong>Duration:</strong> June 2023 - August 2023</p>
+                        <p>Developed and maintained web applications using HTML, CSS, and JavaScript. Collaborated with the design team to implement user-friendly interfaces.</p>
+                    </article>
+                    <article class="experience-item">
+                        <h3>Junior Web Developer</h3>
+                        <h4>Company ABC</h4>
+                        <p><strong>Duration:</strong> September 2023 - Present</p>
+                        <p>Worked on front-end development projects, improving website performance and user experience. Assisted in debugging and testing web applications.</p>
+                    </article>
+                </section>
+                <section class="projects">
+                    <h2>Projects</h2>
+                    <article class="project-item">
+                        <h3>Calculator</h3>
+                        <p>A simple calculator web application that can perform basic arithmetic operations like addition, subtraction, multiplication, and division.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Messaging App</h3>
+                        <p>An online messaging application that allows users to send and receive messages in real-time.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Unit Converter</h3>
+                        <p>A web tool to convert between different units of measurement, including length, weight, and volume.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Weather App</h3>
+                        <p>A web application that displays the current weather conditions and forecast for a specified location.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>To-Do List</h3>
+                        <p>A task management app that allows users to add, edit, and delete tasks to stay organized.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Quiz App</h3>
+                        <p>An interactive quiz application that presents users with multiple-choice questions and tracks their scores.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Recipe App</h3>
+                        <p>A web application where users can search for recipes, view ingredients, and follow cooking instructions.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio website to showcase projects, skills, and contact information.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Blog</h3>
+                        <p>A blogging platform where users can write, publish, and share blog posts with an audience.</p>
+                    </article>
+                    <article class="project-item">
+                        <h3>Expense Tracker</h3>
+                        <p>An app to help users keep track of their expenses and manage their budget effectively.</p>
+                    </article>
+                </section>
+                <section class="contact">
+                    <h2>Contact</h2>
+                    <p><strong>Email:</strong> myemail@example.com</p>
+                    <p><strong>Phone:</strong> +123 456 7890</p>
+                </section>
+                <footer>
+                    <p>&copy; 2024 My Website</p>
+                </footer>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,343 @@
+nav{
+display: flex;
+background-color: rgb(255, 235, 235);
+position: sticky;
+overflow: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+.nav-left img{
+    width: 60px;
+    margin-left: 60px;
+}
+.nav-left i{
+font-size: 30px;
+margin-top: 13px;
+margin-left: 10px;
+cursor: pointer;
+border: 0px;
+
+}
+.nav-left i:hover{
+   
+   color: rgb(22, 44, 105);
+   border-radius: 25%;
+   background-color: #d3baba;
+
+
+}
+.nav-left{
+    display: flex;
+}
+.nav-left h1{
+    display: flex;
+   margin-left: 20px;
+   
+}
+.nav-right{
+margin-left: 350px;
+display: flex;
+}
+.nav-right ul{
+    display: flex;
+}
+.nav-right ul li{
+   list-style: none;
+   margin-left: 45px;
+   
+}
+.nav-right ul a{
+    text-decoration: none;
+    color: rgb(80, 70, 70);
+    font-size: 21px;
+   
+}
+.nav-right ul a li:hover{
+border:2px solid rgb(80, 70, 70);
+background-color: rgb(80, 70, 70);
+color: white;
+}
+.content{
+    height: 150vh;
+    border: 2px solid white;
+    margin-top: 10px;
+    background-color: white;
+    width: 100%;
+}
+.sidebar{
+    width: 100px;
+    height: 180vh;
+    border: 2px solid rgb(22, 44, 105);
+    display: grid;
+    background-color:rgb(22, 44, 105) ;
+}
+.sidebar i{
+    font-size: 50px;
+    margin-left: 25px;
+    color: white;
+    cursor: pointer;
+    margin-top: 100px;
+}
+.sidebar h1{
+    margin-left: 10px;
+    color: white;
+    
+}
+.maincontent{
+    display: flex;
+}
+.abtsection img{
+    text-align: center;
+    margin-left: 200px;
+  
+}
+.se{
+    display: flex;
+}
+.se .h{
+    text-align: center;
+    margin-left: 50px;
+    color:rgb(80, 70, 70);
+    margin-top: 300px;
+    font-size: 40px;
+   
+}
+.se .h1{
+    margin-left: 170px;
+    text-align: center;
+    color: rgb(80, 70, 70);
+    margin-top: 300px;
+    font-size: 40px;
+}
+.abt h1{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(66, 73, 47);
+  
+}
+.abt p{
+    color: rgb(80, 70, 70);
+}
+.experience {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-item h2 {
+    margin: 0 0 10px;
+}
+
+.experience-item h3 {
+    margin: 0 0 5px;
+    color: #555;
+}
+.chat-container {
+    background-color: white;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 450px;
+    background-color: rgb(200, 202, 206);
+}
+.chat-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.chat-messages {
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+}
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+.chat-input input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-right: 1px solid #ddd;
+}
+.chat-input button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.work{
+    height: 100%;
+    background-color: white;
+    width: 100%;
+}
+.work h1{
+    text-align: center;
+    margin-left: 460px;
+}
+.calculator {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator input {
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.calculator button {
+    padding: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.messaging-app {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px;
+}
+
+.message-display {
+    height: 300px;
+    overflow-y: auto;
+    border: 2px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.message-display .message {
+    margin-bottom: 10px;
+}
+
+.messaging-app input {
+    width: calc(100% - 80px);
+    padding: 10px;
+    font-size: 1em;
+}
+
+.messaging-app button {
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+.contact{
+    text-align: center;
+}
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea, 
+.contact-form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+}
+
+.contact-form button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+.resume{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+section .projects{
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+.education-item, .experience-item, .project-item {
+    margin-bottom: 20px;
+}
+
+ul .skill{
+    list-style-type: none;
+    padding: 0;
+}
+
+ul .skill li {
+    background-color: #eee;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
