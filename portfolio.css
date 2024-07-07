@@ -87,7 +87,10 @@ color: white;
 .maincontent{
     display: flex;
 }
-
+.abtsection{
+   background-color: white;
+   height: 90vh;
+}
     
 .abtsection img{
     text-align: center;
