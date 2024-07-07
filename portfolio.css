@@ -339,6 +339,64 @@ ul .skill li {
     margin: 5px 0;
     padding: 10px;
 }
+@media screen and (max-width: 768px) {
+    .nav-right ul {
+        display: none;
+    }
+
+    .nav-left h1 {
+        font-size: 1rem;
+    }
+
+    .nav-left img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-left i {
+        font-size: 1.5rem;
+    }
+
+    .sidebar {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .abtsection, .experience, .work, .contact, .resume {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-left {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav-left h1 {
+        font-size: 0.8rem;
+    }
+
+    .nav-left img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .sidebar {
+        padding: 10px;
+    }
+}
 
 footer {
     text-align: center;
