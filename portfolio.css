@@ -87,9 +87,12 @@ color: white;
 .maincontent{
     display: flex;
 }
+
+    
 .abtsection img{
     text-align: center;
     margin-left: 200px;
+    width:400px;
   
 }
 .se{
