@@ -64,7 +64,7 @@ function App() {
     // Handle document title change when tab visibility changes
     const handleTabChange = () => {
       if (document.hidden) {
-        document.title = "👋🏻 Git pulling you back in!";
+        document.title = "Saugat Gautam | Software Engineer | Portfolio";
       } else {
         document.title = originalTitle;
       }
