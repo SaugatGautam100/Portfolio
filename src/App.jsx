@@ -105,6 +105,14 @@ function App() {
             {/* Fallback route for unknown paths */}
             <Route path="*" element={<Navigate to="/page-not-found" />} />
           </Routes>
+          <amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-5473443896068638"
+     data-ad-slot="7875574219"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad>
         </>
       )}
     </>
